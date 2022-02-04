@@ -1,23 +1,22 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter as Router,  Route } from 'react-router-dom';
+import React from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-import App from './App';
-import ISSTracker from './components/ISSTracker';
-import MarsPhoto from './components/MarsPhoto';
-import SolarSystem from './components/SolarSystem';
+import App from "./App";
+import ISSTracker from "./components/ISSTracker";
+import MarsPhoto from "./components/MarsPhoto";
+import SolarSystem from "./components/SolarSystem";
 
 ReactDOM.render(
   <React.StrictMode>
-
-    <App/> {/*Testing JSX Components*/}
-
-    {/* <Router>
-      <Route exact path='/' component={App}/>
-      <Route path='/exploring' component={SolarSystem}/>
-      <Route path='/marsphoto' component={MarsPhoto}/>
-      <Route path='/isstracker' component={ISSTracker}/>
-    </Router> */}
+    <Router>
+      <Routes>
+        <Route exact path="/" element={<App />} />
+        <Route path="exploring" element={<SolarSystem />} />
+        <Route path="marsphoto" element={<MarsPhoto />} />
+        <Route path="isstracker" element={<ISSTracker />} />
+      </Routes>
+    </Router>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
