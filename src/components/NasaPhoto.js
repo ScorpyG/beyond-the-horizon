@@ -1,6 +1,16 @@
+import { useEffect } from 'react';
+import { NavHome } from './Navbar';
+
 const NasaPhoto = () => {
+  // useEffect = (() => {
+  //   fetch(`https://api.nasa.gov/planetary/apod?api_key=${process.env.API_KEY}`)
+  //     .then(response => response.json)
+  // })
   return (
-      <h1>Astronomy Fact</h1>
+    <>
+      <NavHome />
+      <h1>Learn new thing everyday!</h1>
+    </>
   );
 };
 

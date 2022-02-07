@@ -1,6 +1,28 @@
+import solarSystemInfo from '../planet-data/planets'
+import { NavHome } from './Navbar';
+
+// const Planet = (props) => {
+//     return (
+//        <></>
+//     );
+// }
+
 const SolarSystem = () => {
     return (
-        <h1>Exploring the Solar System</h1>
+        <>
+            <NavHome/>
+            <h1>Exploring the Solar System</h1>
+        </>
+        // {solarSystemInfo.map( planetInfo => 
+        //     <Planet 
+        //         id = {planetInfo.id}  
+        //         name = {planetInfo.Name}
+        //         radius = {planetInfo.radius}
+        //         surface_area = {planetInfo.surface_area}
+        //         orbital_time = {planetInfo.orbital_time}
+        //         description = {planetInfo.description}
+        //     />
+        // )}
     );
 }
 

@@ -16,7 +16,7 @@ ReactDOM.render(
         <Route path="exploring" element={<SolarSystem />} />
         <Route path="marsphoto" element={<MarsPhoto />} />
         <Route path="isstracker" element={<ISSTracker />} />
-        <Route path="/astro" element={<NasaPhoto />} />
+        <Route path="/apod" element={<NasaPhoto />} />
       </Routes>
     </Router>
   </React.StrictMode>,
