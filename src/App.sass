@@ -6,16 +6,43 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap')
 
-html
-  font-family: 'Rubik', sans-serif
+*,
+*::before,
+*::after
+  box-sizing: border-box
+
+/* Set core root defaults */
+html:focus-within 
+  scroll-behavior: smooth
 
 body
+  font-family: 'Rubik', sans-serif
   margin: 0
-  height: 100vh
-  // background-image: linear-gradient(to bottom, #18191a, #131922, #121729, #18142f, #230e30)
-  background-image: linear-gradient(to bottom, #1a151f, #181118, #130b11, #0c0608, #000000)
+  min-height: 100vh
+  text-rendering: optimizeSpeed
+  background-image: linear-gradient(to bottom, #18191a, #131922, #121729, #18142f, #230e30)
+  // background-image: linear-gradient(to bottom, #1a151f, #181118, #130b11, #0c0608, #000000)
   color: white
 
 a
   color: white
   text-decoration: none
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select 
+  font: inherit
+
+@media (prefers-reduced-motion: reduce) 
+  html:focus-within 
+   scroll-behavior: auto
+  
+  *,
+  *::before,
+  *::after 
+    animation-duration: 0.01ms !important
+    animation-iteration-count: 1 !important
+    transition-duration: 0.01ms !important
+    scroll-behavior: auto !important

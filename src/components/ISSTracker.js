@@ -1,6 +1,11 @@
+import { NavHome } from './Navbar'
+
 const ISSTracker = () => {
     return (
-        <h1>International Space Station Stacker</h1>
+        <>
+            <NavHome/>
+            <h1>International Space Station Stacker</h1>
+        </>
     );
 }
 
