@@ -4,8 +4,11 @@
     grid-template-columns: 1fr 2fr
     margin: auto
     width: 90%
-    height: 94vh
+    height: 94vh  
     .info-box
+        -webkit-animation: moveInDown 1.2s ease-out
+        animation: moveInDown 1.2s ease-out
+
         line-height: 1.5
         letter-spacing: 1px
         word-spacing: 1px
@@ -19,8 +22,26 @@
             margin: 0
             padding: 0
     .image-box
+        -webkit-animation: moveInLeft 1.2s ease-out
+        animation: moveInLeft 1.2s ease-out
         padding-right: 20px
         img, iframe
+            max-width: 1100px
             height: 650px
-        iframe
-            width: 1000px
+
+@keyframes moveInLeft 
+  0% 
+    opacity: 0
+    -webkit-transform: translateX(-1000px)
+
+  100% 
+    opacity: 1
+    -webkit-transform: translateX(0)
+
+@keyframes moveInDown
+    0%
+        opacity: 0
+        -webkit-transform: translateY(1000px)
+    100%
+        opacity: 1
+        -webkit-transform: translateY(0)

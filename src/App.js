@@ -1,9 +1,13 @@
 import "./App.sass";
 import { Navbar } from "./components/Navbar";
+import THREE_D from "./components/3D";
 
-function App() {
-  return (  
-    <Navbar />
+const App = () => {
+  return (
+    <>
+      {/* <Navbar /> */}
+      <canvas id="bg"/>
+    </>
   );
 }
 

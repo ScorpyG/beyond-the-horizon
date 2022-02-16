@@ -7,28 +7,28 @@ const Navbar = () => {
       <div className="nav-item">
         <Link to="/exploring">
           {/* <i class="fas fa-globe-europe"/> */}
-          <span> Solar System</span>
+          <span>Solar System</span>
         </Link>
       </div>
 
       <div className="nav-item">
         <Link to="/marsphoto">
           {/* <i className="fas fa-robot"/> */}
-          <span> Mars Rover Photos</span>
+          <span>Mars Photos</span>
         </Link>
       </div>
 
       <div className="nav-item">
         <Link to="/isstracker">
           {/* <i className="fas fa-satellite"/> */}
-          <span> ISS Tracker</span>
+          <span>ISS Tracker</span>
         </Link>
       </div>
 
       <div className="nav-item">
         <Link to="/apod">
           {/* <i className="fas fa-meteor"/> */}
-          <span> APOD</span>
+          <span>APOD</span>
         </Link>
       </div>
     </div>
