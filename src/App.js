@@ -1,12 +1,12 @@
 import "./App.sass";
+import { Hero } from "./components/Hero";
 import { Navbar } from "./components/Navbar";
-import THREE_D from "./components/3D";
 
 const App = () => {
   return (
     <>
-      {/* <Navbar /> */}
-      <canvas id="bg"/>
+      <Navbar />
+      <Hero />
     </>
   );
 }

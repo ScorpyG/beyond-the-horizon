@@ -1,32 +1,11 @@
-$hoverColor: linear-gradient(90deg, #9680d1, #e5532e)
-
 .nav-bar
     width: 100%
     display: flex
-    justify-content: space-around
+    justify-content: center
     .nav-item
-        font-size: 25px
-        font-weight: 600
-        padding-top: 15px
+        margin: 0 20px 0 20px 
+        font-size: 1.3rem
+        padding: 40px 0 0 0
         text-align: center
         position: relative
-        &:before
-            content: ''
-            position: absolute
-            bottom: -5px
-            width: 0px
-            height: 5px
-            margin: 5px 0 0
-            transition: all 0.5s ease-in-out
-            transition-duration: 0.5s
-            opacity: 0
-            background: $hoverColor
-        &:hover, &:active
-            background: $hoverColor
-            -webkit-text-fill-color: transparent
-            -webkit-background-clip: text
-            background-clip: text
-            &:before
-                width: 100%
-                opacity: 1
 

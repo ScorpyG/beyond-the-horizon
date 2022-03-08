@@ -4,11 +4,12 @@
     grid-template-columns: 1fr 2fr
     margin: auto
     width: 90%
-    height: 94vh  
+    height: 90vh  
     .info-box
+        background-color: rgba(170, 170, 170, 0.1)
+        backdrop-filter: blur(1px)
         -webkit-animation: moveInDown 1.2s ease-out
         animation: moveInDown 1.2s ease-out
-
         line-height: 1.5
         letter-spacing: 1px
         word-spacing: 1px
@@ -22,6 +23,7 @@
             margin: 0
             padding: 0
     .image-box
+        z-index: 1
         -webkit-animation: moveInLeft 1.2s ease-out
         animation: moveInLeft 1.2s ease-out
         padding-right: 20px
