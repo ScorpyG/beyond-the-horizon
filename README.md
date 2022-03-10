@@ -4,11 +4,12 @@ Currently, this project is in **development!**
 
 ## Description
 
-Utilize NASA APIs to display contents related to space exploration and help people learn more about the world beyond our own. Make it fun and interactive and also look out for alien 👽
+Utilize different REST APIs to display contents related to space exploration and help people learn more about the world beyond our own. Make it fun and interactive and also look out for alien 👽.
+Learning Three.js to create an interactive environment and implementing through React framework with [Drei](https://docs.pmnd.rs/drei/introduction) & [React Three Fiber](https://docs.pmnd.rs/react-three-fiber).
 
-Targeting APIs:
+REST APIs:
 - APOD (Astronomy Picture of the Day)
-- Mars Rover Photos: Images captured by NASA Mars Rovers (Curiosity, Oppertunity and Spirit)
+- Mars Rover Photos: Images captured by NASA Mars Rovers (Curiosity, Opportunity and Spirit)
 - Insight: Mars Weather Service API (Not 100% accurate)
 - International Space Station Tracker
 

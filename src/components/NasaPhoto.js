@@ -39,7 +39,7 @@ const NasaPhoto = () => {
           setData(result);
 
           // Check object contain 'code' attribute
-          if (result.hasOwnProperty('code')) {
+          if (result.hasOwnProperty("code")) {
             // Parsing API result into error in case server encounter an error
             setError(result);
           }
@@ -61,7 +61,7 @@ const NasaPhoto = () => {
           <p>{error.message}</p>
         </div>
       </>
-      );
+    );
   } else if (!loading) {
     return (
       // Loading animation
@@ -75,7 +75,8 @@ const NasaPhoto = () => {
         <NavHome />
         <div className="apod-box">
           <div className="image-box">
-            <ImageOrVideo props={data} /> {/*Passing JSON into component argument to return appropriate JSX*/}
+            <ImageOrVideo props={data} />{" "}
+            {/*Passing JSON into component argument to return appropriate JSX*/}
           </div>
           <div className="info-box">
             <h1>{data.title}</h1>
