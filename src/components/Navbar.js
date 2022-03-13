@@ -1,6 +1,10 @@
+// Import necessary dependencies / components
 import { Link } from "react-router-dom";
+
+// Import styling
 import "../styling/navbar.sass";
 
+// Navigation bar JSX component
 const Navbar = () => {
   return (
     <div className="nav-bar">
@@ -40,7 +44,7 @@ const NavHome = () => {
     <div className="nav-bar">
       <div className="nav-item">
         <Link to="/">
-          <span>RETURN </span>
+          <span><u>RETURN</u></span>
         </Link>
       </div>
     </div>

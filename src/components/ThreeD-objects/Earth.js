@@ -1,7 +1,7 @@
 // Import necessary dependencies
 import React, { Suspense, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { useTexture, OrbitControls } from "@react-three/drei";
+import { OrbitControls, useTexture } from "@react-three/drei";
 import * as THREE from "three";
 
 // Import external textures
@@ -27,23 +27,24 @@ function EarthScene() {
 
   // Auto rotation speed for earth and cloud
   useFrame(() => {
-    cloudRef.current.rotation.y += 0.0002;  // Cloud rotation speed
-    earthRef.current.rotation.x = 0.25; // Tilt on x-axis
-    earthRef.current.rotation.y += 0.0003; // Earth rotation speed
+    cloudRef.current.rotation.y += 0.0003; // Cloud rotation speed
+    earthRef.current.rotation.y += 0.0002; // Earth rotation speed
   });
 
   return (
     <>
-      <ambientLight intensity={0.2} />
-      <pointLight color="#ffffff" position={[4, 3, 10]} intensity={3} />
+      {/* Lighting */}
+      <ambientLight intensity={0.3} />
+      <pointLight color="#ffffff" position={[5, 2, 10]} intensity={4} />
 
       {/* Earth atmosphere */}
       <mesh ref={cloudRef}>
         {/* Import atmosphere texture into mesh */}
-        <sphereBufferGeometry attach="geometry" args={[2.25, 64, 32]} />
+        <ambientLight color='#61adff' intensity={1}/>
+        <sphereBufferGeometry attach="geometry" args={[2.97, 64, 32]} />
         <meshPhongMaterial
           map={EcloudMap}
-          opacity={0.5}
+          opacity={0.6}
           depthWrite={true}
           transparent={true}
           side={THREE.DoubleSide}
@@ -53,12 +54,22 @@ function EarthScene() {
       {/* Earth */}
       <mesh ref={earthRef}>
         {/* Import object textures into mesh */}
-        <sphereBufferGeometry attach="geometry" args={[2.2, 64, 32]} />
+        <sphereBufferGeometry attach="geometry" args={[2.92, 64, 32]} />
         <meshPhongMaterial specularMap={EspecMap} />
         <meshStandardMaterial
           map={EarthMap}
           normalMap={EnormalMap}
           bumpMap={EbumpMap}
+        />
+
+        <OrbitControls
+          enableZoom={false}
+          enableRotate={true}
+          enablePan={false}
+          rotateSpeed={0.15}
+          panSpeed={1}
+          minPolarAngle={1}
+          maxPolarAngle={2}
         />
       </mesh>
     </>
@@ -68,7 +79,7 @@ function EarthScene() {
 // JSX Earth component
 export const Earth = () => {
   return (
-    <Canvas className="hero-image">
+    <Canvas>
       <Suspense fallback={null}>
         <EarthScene />
       </Suspense>

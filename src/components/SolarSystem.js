@@ -1,5 +1,8 @@
+// Import necessary dependencies / components
 import solarSystemInfo from '../planet-data/planets'
 import { NavHome } from './Navbar';
+
+// Import styling
 
 // const Planet = (props) => {
 //     return (

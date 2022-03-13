@@ -51,6 +51,7 @@ const NasaPhoto = () => {
       );
   }, []);
 
+  // If error detected return Error JSX
   if (error) {
     return (
       <>

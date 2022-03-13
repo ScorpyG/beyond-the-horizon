@@ -1,11 +1,11 @@
 .hero
-    pointer-events: none
     margin: auto
+    width: 80vw
     height: 90vh
     display: grid
     grid-template-columns: 1fr 1fr
-    align-items: center
     .hero-text
+        pointer-events: none
         z-index: 1
         width: 700px
         margin: auto
@@ -21,5 +21,10 @@
             letter-spacing: 5px
             font-size: 3rem
     .hero-image
+        // border: 2px solid white
+        pointer-events: auto
+        cursor: grab
         z-index: 1
         margin: auto
+        width: 80%
+        height: 70%

@@ -1,5 +1,7 @@
+// Import necessary dependencies / components
 import { NavHome } from './Navbar'
 
+// ISS Tracker Page JSX component
 const ISSTracker = () => {
     return (
         <>
