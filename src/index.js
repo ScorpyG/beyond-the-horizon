@@ -11,7 +11,7 @@ import { Background } from "./components/Background";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Background />
+    {/* <Background /> */}
     <Router>
       <Routes>
         <Route exact path="/" element={<App />} />

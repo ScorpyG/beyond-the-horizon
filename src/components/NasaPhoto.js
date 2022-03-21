@@ -73,7 +73,8 @@ const NasaPhoto = () => {
   } else {
     return (
       <>
-        <NavHome />
+        {/* <NavHome /> */}
+        <h1 className="title">Astronomy Picture Of the Day</h1>
         <div className="apod-box">
           <div className="image-box">
             <ImageOrVideo props={data} />{" "}

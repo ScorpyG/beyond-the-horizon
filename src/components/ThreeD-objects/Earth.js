@@ -4,7 +4,7 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, useTexture } from "@react-three/drei";
 import * as THREE from "three";
 
-// Import external textures
+// Import Earth textures
 import EarthDayMap from "../../assets/textures/2k_earth_daymap.jpg";
 import EarthCloudMap from "../../assets/textures/2k_earth_clouds.jpg";
 import EarthSpecMap from "../../assets/textures/earthspec1k.jpg";
@@ -31,11 +31,13 @@ function EarthScene() {
     earthRef.current.rotation.y += 0.0002; // Earth rotation speed
   });
 
+  // Scene Objects
   return (
     <>
-      {/* Lighting */}
-      <ambientLight intensity={0.3} />
-      <pointLight color="#ffffff" position={[5, 2, 10]} intensity={4} />
+      {/* Overall Lighting */}
+      <ambientLight intensity={0.8} />
+      {/* Directional Lighting */}
+      <pointLight color="#ffffff" position={[5, 2, 10]} intensity={3} /> 
 
       {/* Earth atmosphere */}
       <mesh ref={cloudRef}>
@@ -44,7 +46,7 @@ function EarthScene() {
         <sphereBufferGeometry attach="geometry" args={[2.97, 64, 32]} />
         <meshPhongMaterial
           map={EcloudMap}
-          opacity={0.6}
+          opacity={0.45}
           depthWrite={true}
           transparent={true}
           side={THREE.DoubleSide}

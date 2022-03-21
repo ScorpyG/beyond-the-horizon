@@ -23,6 +23,7 @@ html:focus-within
   border-radius: 100vw
 
 body, html
+  background: url(./assets/textures/2k_stars_milky_way.jpg) no-repeat left center / cover
   font-family: 'Rubik', sans-serif
   margin: 0
   min-height: 100vh
@@ -43,6 +44,9 @@ a
     &:before
       opacity: 1
 
+.title 
+  text-align: center
+
 /* Inherit fonts for inputs and buttons */
 input,
 button,
@@ -53,7 +57,6 @@ select
 @media (prefers-reduced-motion: reduce)
   html:focus-within
     scroll-behavior: auto
-
   *,
   *::before,
   *::after
