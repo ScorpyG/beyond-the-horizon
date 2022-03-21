@@ -8,11 +8,11 @@ import '../styling/solarsystem.sass'
 const Planet = (props) => {
   return (
     <div className="planet">
-      <h3>{`${props.name}`}</h3>
-      <p>Radius: {`${props.radius}`}</p>
-      <p>Surface Area: {`${props.surface_area}`}</p>
-      <p>Orbital Time: {`${props.orbital_time}`}</p>
-      <p>Description: {`${props.description}`}</p>
+      <h1>{`${props.name}`}</h1>
+      <p><b>Radius:</b> {`${props.radius}`}</p>
+      <p><b>Surface Area:</b> {`${props.surface_area}`}</p>
+      <p><b>Orbital Time:</b> {`${props.orbital_time}`}</p>
+      <p><b>Description:</b> {`${props.description}`}</p>
     </div>
   );
 };
@@ -21,7 +21,7 @@ const SolarSystem = () => {
   return (
     <>
       {/* <NavHome /> */}
-      <h1>Exploring the Solar System</h1>
+      <h1 className="title">Exploring the Solar System</h1>
       <div className="solar-system">
         {solarSystemInfo.map((planetInfo) => (
           <Planet

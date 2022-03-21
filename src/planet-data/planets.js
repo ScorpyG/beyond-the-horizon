@@ -9,7 +9,16 @@ const solarSystemInfo = [
       It is a nearly perfect ball of hot plasma, heated to incandescence 
       by nuclear fusion reactions in its core, radiating the energy mainly 
       as visible light, ultraviolet light, and infrared radiation. It is 
-      by far the most important source of energy for life on Earth.`,
+      by far the most important source of energy for life on Earth. 
+      The Sun is the largest object in our solar system. The Sun's 
+      volume would need 1.3 million Earths to fill it. Its gravity 
+      holds the solar system together, keeping everything from the 
+      biggest planets to the smallest bits of debris in orbit around it. 
+      The hottest part of the Sun is its core, where temperatures top 
+      27 million degrees Fahrenheit (15 million degrees Celsius). 
+      The Sun's activity, from its powerful eruptions to the steady 
+      stream of charged particles it sends out, influences the nature of 
+      space throughout the solar system.`,
   },
   {
     id: 2,
@@ -19,7 +28,15 @@ const solarSystemInfo = [
     orbital_time: `88 days`,
     description: `The smallest planet in our solar system and closest to the 
       Sun—is only slightly larger than Earth's Moon. Mercury is the fastest 
-      planet, zipping around the Sun every 88 Earth days.`
+      planet, zipping around the Sun every 88 Earth days. From the surface of 
+      Mercury, the Sun would appear more than three times as large as it does 
+      when viewed from Earth, and the sunlight would be as much as seven times 
+      brighter. Despite its proximity to the Sun, Mercury is not the hottest 
+      planet in our solar system - that title belongs to nearby Venus, thanks 
+      to its dense atmosphere. Because of Mercury's elliptical - egg-shaped - 
+      orbit, and sluggish rotation, the Sun appears to rise briefly, set, and 
+      rise again from some parts of the planet's surface. The same thing happens 
+      in reverse at sunset.`
   },
   {
     id: 3,
@@ -30,7 +47,17 @@ const solarSystemInfo = [
     description: `Venus is the second planet from the Sun. It is named after 
       the Roman goddess of love and beauty. As the brightest natural object 
       in Earth's night sky after the Moon, Venus can cast shadows and can be 
-      visible to the naked eye in broad daylight.`
+      visible to the naked eye in broad daylight. Venus has a thick, toxic 
+      atmosphere filled with carbon dioxide and it's perpetually shrouded in thick, 
+      yellowish clouds of sulfuric acid that trap heat, causing a runaway greenhouse 
+      effect. It's the hottest planet in our solar system, even though Mercury is 
+      closer to the Sun. Surface temperatures on Venus are about 900 degrees 
+      Fahrenheit (475 degrees Celsius) - hot enough to melt lead.  The surface 
+      is a rusty color and it's peppered with intensely crunched mountains and 
+      thousands of large volcanoes. Scientists think it's possible some volcanoes 
+      are still active. Venus has crushing air pressure at its surface - more 
+      than 90 times that of Earth - similar to the pressure you'd encounter 
+      a mile below the ocean on Earth.`
   },
   {
     id: 4,
@@ -41,7 +68,12 @@ const solarSystemInfo = [
     description: `Earth is the third planet from the Sun and the only astronomical 
       object known to harbor life. While large amounts of water can be found throughout 
       the Solar System, only Earth sustains liquid surface water. About 71% of Earth's 
-      surface is made up of the ocean, dwarfing Earth's polar ice, lakes and rivers.`
+      surface is made up of the ocean, dwarfing Earth's polar ice, lakes and rivers. 
+      Just slightly larger than nearby Venus, Earth is the biggest of the four planets 
+      closest to the Sun, all of which are made of rock and metal. The name Earth is 
+      at least 1,000 years old. All of the planets, except for Earth, were named after 
+      Greek and Roman gods and goddesses. However, the name Earth is a Germanic word, 
+      which simply means "the ground."`
   },
   {
     id: 5,
