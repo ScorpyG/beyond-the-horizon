@@ -2,37 +2,37 @@ import React, { Suspense, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { useTexture } from "@react-three/drei";
 
-// Import Sun Texture
-import SunTexture from "../../assets/textures/8k_sun.jpg";
+// Import Mercury Texture
+import MercuryTexture from "../../assets/textures/8k_mercury.jpg";
 
-function SunScene() {
+function MercuryScene() {
   // Texture files
-  const [SunMap] = useTexture([SunTexture]);
-  const sunRef = useRef(null);
+  const [MercuryMap] = useTexture([MercuryTexture]);
+  const MercuryRef = useRef(null);
 
   useFrame(() => {
-    sunRef.current.rotation.y += 0.0003; // Sun rotation speed
+    MercuryRef.current.rotation.y += 0.0003; // Mercury rotation speed
   });
 
   return (
     <>
       <ambientLight intensity={2} />
-      <mesh ref={sunRef}>
+      <mesh ref={MercuryRef}>
         <ambientLight color='#61adff' intensity={1}/>
         <sphereBufferGeometry attach="geometry" args={[2, 64, 32]} />
         <meshStandardMaterial 
-          map={SunMap}
+          map={MercuryMap}
         />
       </mesh>
     </>
   );
 }
 
-export const Sun = () => {
+export const Mercury = () => {
   return (
     <Canvas>
       <Suspense fallback={null}>
-        <SunScene />
+        <MercuryScene />
       </Suspense>
     </Canvas>
   );

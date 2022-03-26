@@ -2,37 +2,37 @@ import React, { Suspense, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { useTexture } from "@react-three/drei";
 
-// Import Sun Texture
-import SunTexture from "../../assets/textures/8k_sun.jpg";
+// Import Mars Texture
+import MarsTexture from "../../assets/textures/8k_mars.jpg";
 
-function SunScene() {
+function MarsScene() {
   // Texture files
-  const [SunMap] = useTexture([SunTexture]);
-  const sunRef = useRef(null);
+  const [MarsMap] = useTexture([MarsTexture]);
+  const MarsRef = useRef(null);
 
   useFrame(() => {
-    sunRef.current.rotation.y += 0.0003; // Sun rotation speed
+    MarsRef.current.rotation.y += 0.0003; // Mars rotation speed
   });
 
   return (
     <>
       <ambientLight intensity={2} />
-      <mesh ref={sunRef}>
+      <mesh ref={MarsRef}>
         <ambientLight color='#61adff' intensity={1}/>
         <sphereBufferGeometry attach="geometry" args={[2, 64, 32]} />
         <meshStandardMaterial 
-          map={SunMap}
+          map={MarsMap}
         />
       </mesh>
     </>
   );
 }
 
-export const Sun = () => {
+export const Mars = () => {
   return (
     <Canvas>
       <Suspense fallback={null}>
-        <SunScene />
+        <MarsScene />
       </Suspense>
     </Canvas>
   );

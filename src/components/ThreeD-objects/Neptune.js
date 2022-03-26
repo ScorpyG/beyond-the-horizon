@@ -2,37 +2,37 @@ import React, { Suspense, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { useTexture } from "@react-three/drei";
 
-// Import Sun Texture
-import SunTexture from "../../assets/textures/8k_sun.jpg";
+// Import Neptune Texture
+import NeptuneTexture from "../../assets/textures/2k_neptune.jpg";
 
-function SunScene() {
+function NeptuneScene() {
   // Texture files
-  const [SunMap] = useTexture([SunTexture]);
-  const sunRef = useRef(null);
+  const [NeptuneMap] = useTexture([NeptuneTexture]);
+  const NeptuneRef = useRef(null);
 
   useFrame(() => {
-    sunRef.current.rotation.y += 0.0003; // Sun rotation speed
+    NeptuneRef.current.rotation.y += 0.0003; // Neptune rotation speed
   });
 
   return (
     <>
       <ambientLight intensity={2} />
-      <mesh ref={sunRef}>
+      <mesh ref={NeptuneRef}>
         <ambientLight color='#61adff' intensity={1}/>
         <sphereBufferGeometry attach="geometry" args={[2, 64, 32]} />
         <meshStandardMaterial 
-          map={SunMap}
+          map={NeptuneMap}
         />
       </mesh>
     </>
   );
 }
 
-export const Sun = () => {
+export const Neptune = () => {
   return (
     <Canvas>
       <Suspense fallback={null}>
-        <SunScene />
+        <NeptuneScene />
       </Suspense>
     </Canvas>
   );

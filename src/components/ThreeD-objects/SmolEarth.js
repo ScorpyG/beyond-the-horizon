@@ -46,7 +46,7 @@ function EarthScene() {
         <ambientLight color='#61adff' intensity={0.9}/>
 
         {/* Import atmosphere texture into mesh */}
-        <sphereBufferGeometry attach="geometry" args={[2.95, 64, 32]} />
+        <sphereBufferGeometry attach="geometry" args={[2.03, 64, 32]} />
         <meshPhongMaterial
           map={EcloudMap}
           opacity={0.6}
@@ -62,7 +62,7 @@ function EarthScene() {
         <hemisphereLightProbe color='#ffffff' intensity={1.2} />
 
         {/* Import object textures into mesh */}
-        <sphereBufferGeometry attach="geometry" args={[2.92, 64, 32]} />
+        <sphereBufferGeometry attach="geometry" args={[2, 64, 32]} />
         <meshPhongMaterial specularMap={EspecMap} />
         <meshStandardMaterial
           map={EarthMap}
@@ -72,7 +72,7 @@ function EarthScene() {
 
         <OrbitControls
           enableZoom={false}
-          enableRotate={true}
+          enableRotate={false}
           enablePan={false}
           rotateSpeed={0.15}
           panSpeed={1}

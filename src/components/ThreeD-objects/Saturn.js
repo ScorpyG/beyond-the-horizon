@@ -2,37 +2,37 @@ import React, { Suspense, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { useTexture } from "@react-three/drei";
 
-// Import Sun Texture
-import SunTexture from "../../assets/textures/8k_sun.jpg";
+// Import Saturn Texture
+import SaturnTexture from "../../assets/textures/8k_saturn.jpg";
 
-function SunScene() {
+function SaturnScene() {
   // Texture files
-  const [SunMap] = useTexture([SunTexture]);
-  const sunRef = useRef(null);
+  const [SaturnMap] = useTexture([SaturnTexture]);
+  const SaturnRef = useRef(null);
 
   useFrame(() => {
-    sunRef.current.rotation.y += 0.0003; // Sun rotation speed
+    SaturnRef.current.rotation.y += 0.0003; // Saturn rotation speed
   });
 
   return (
     <>
       <ambientLight intensity={2} />
-      <mesh ref={sunRef}>
+      <mesh ref={SaturnRef}>
         <ambientLight color='#61adff' intensity={1}/>
         <sphereBufferGeometry attach="geometry" args={[2, 64, 32]} />
         <meshStandardMaterial 
-          map={SunMap}
+          map={SaturnMap}
         />
       </mesh>
     </>
   );
 }
 
-export const Sun = () => {
+export const Saturn = () => {
   return (
     <Canvas>
       <Suspense fallback={null}>
-        <SunScene />
+        <SaturnScene />
       </Suspense>
     </Canvas>
   );

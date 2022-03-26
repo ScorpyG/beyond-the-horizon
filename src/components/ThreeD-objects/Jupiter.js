@@ -2,37 +2,37 @@ import React, { Suspense, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { useTexture } from "@react-three/drei";
 
-// Import Sun Texture
-import SunTexture from "../../assets/textures/8k_sun.jpg";
+// Import Jupiter Texture
+import JupiterTexture from "../../assets/textures/8k_jupiter.jpg";
 
-function SunScene() {
+function JupiterScene() {
   // Texture files
-  const [SunMap] = useTexture([SunTexture]);
-  const sunRef = useRef(null);
+  const [JupiterMap] = useTexture([JupiterTexture]);
+  const JupiterRef = useRef(null);
 
   useFrame(() => {
-    sunRef.current.rotation.y += 0.0003; // Sun rotation speed
+    JupiterRef.current.rotation.y += 0.0003; // Jupiter rotation speed
   });
 
   return (
     <>
       <ambientLight intensity={2} />
-      <mesh ref={sunRef}>
+      <mesh ref={JupiterRef}>
         <ambientLight color='#61adff' intensity={1}/>
         <sphereBufferGeometry attach="geometry" args={[2, 64, 32]} />
         <meshStandardMaterial 
-          map={SunMap}
+          map={JupiterMap}
         />
       </mesh>
     </>
   );
 }
 
-export const Sun = () => {
+export const Jupiter = () => {
   return (
     <Canvas>
       <Suspense fallback={null}>
-        <SunScene />
+        <JupiterScene />
       </Suspense>
     </Canvas>
   );

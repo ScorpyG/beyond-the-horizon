@@ -4,7 +4,7 @@ const solarSystemInfo = [
     name: `Sun`,
     radius: `696,340 km`,
     surface_area: `6.08 trillion km²`,
-    orbital_time: 'N/A',
+    orbital_time: "N/A",
     description: `The Sun is the star at the center of the Solar System. 
       It is a nearly perfect ball of hot plasma, heated to incandescence 
       by nuclear fusion reactions in its core, radiating the energy mainly 
@@ -19,11 +19,12 @@ const solarSystemInfo = [
       The Sun's activity, from its powerful eruptions to the steady 
       stream of charged particles it sends out, influences the nature of 
       space throughout the solar system.`,
+    link: "https://en.wikipedia.org/wiki/Sun",
   },
   {
     id: 2,
     name: `Mercury`,
-    radius: `2,439.7km`,
+    radius: `2,439.7 km`,
     surface_area: `74.8 million km²`,
     orbital_time: `88 days`,
     description: `The smallest planet in our solar system and closest to the 
@@ -36,7 +37,8 @@ const solarSystemInfo = [
       to its dense atmosphere. Because of Mercury's elliptical - egg-shaped - 
       orbit, and sluggish rotation, the Sun appears to rise briefly, set, and 
       rise again from some parts of the planet's surface. The same thing happens 
-      in reverse at sunset.`
+      in reverse at sunset.`,
+    link: "https://en.wikipedia.org/wiki/Mercury_(planet)",
   },
   {
     id: 3,
@@ -57,7 +59,8 @@ const solarSystemInfo = [
       thousands of large volcanoes. Scientists think it's possible some volcanoes 
       are still active. Venus has crushing air pressure at its surface - more 
       than 90 times that of Earth - similar to the pressure you'd encounter 
-      a mile below the ocean on Earth.`
+      a mile below the ocean on Earth.`,
+    link: "https://en.wikipedia.org/wiki/Venus",
   },
   {
     id: 4,
@@ -73,7 +76,8 @@ const solarSystemInfo = [
       closest to the Sun, all of which are made of rock and metal. The name Earth is 
       at least 1,000 years old. All of the planets, except for Earth, were named after 
       Greek and Roman gods and goddesses. However, the name Earth is a Germanic word, 
-      which simply means "the ground."`
+      which simply means "the ground."`,
+    link: "https://en.wikipedia.org/wiki/Earth",
   },
   {
     id: 5,
@@ -83,7 +87,12 @@ const solarSystemInfo = [
     orbital_time: `687 days`,
     description: `Mars is the fourth planet from the Sun and the second-smallest planet 
       in the Solar System, being larger than only Mercury. In English, Mars carries the 
-      name of the Roman god of war and is often referred to as the "Red Planet"`
+      name of the Roman god of war and is often referred to as the "Red Planet". Mars is 
+      also a dynamic planet with seasons, polar ice caps, canyons, extinct volcanoes, 
+      and evidence that it was even more active in the past. Mars is one of the most 
+      explored bodies in our solar system, and it's the only planet where we've sent 
+      rovers to roam the alien landscape.`,
+    link: "https://en.wikipedia.org/wiki/Mars",
   },
   {
     id: 6,
@@ -94,7 +103,11 @@ const solarSystemInfo = [
     description: `Jupiter is the fifth planet from the Sun and the largest in the Solar 
       System. It is a gas giant with a mass more than two and a half times that of all 
       the other planets in the Solar System combined, but slightly less than one-thousandth 
-      the mass of the Sun.`
+      the mass of the Sun. Jupiter's familiar stripes and swirls are actually cold, windy 
+      clouds of ammonia and water, floating in an atmosphere of hydrogen and helium. 
+      Jupiter's iconic Great Red Spot is a giant storm bigger than Earth that has raged for 
+      hundreds of years`,
+    link: "https://en.wikipedia.org/wiki/Jupiter",
   },
   {
     id: 7,
@@ -105,7 +118,11 @@ const solarSystemInfo = [
     description: `Saturn is the sixth planet from the Sun and the second-largest in the Solar 
       System, after Jupiter. It is a gas giant with an average radius of about nine and a half 
       times that of Earth. It only has one-eighth the average density of Earth; however, with 
-      its larger volume, Saturn is over 95 times more massive.`
+      its larger volume, Saturn is over 95 times more massive. Adorned with thousands of beautiful 
+      ringlets, Saturn is unique among the planets. It is not the only planet to have rings -
+      made of chunks of ice and rock - but none are as spectacular or as complicated as Saturn's. 
+      Like fellow gas giant Jupiter, Saturn is a massive ball made mostly of hydrogen and helium.`,
+    link: "https://en.wikipedia.org/wiki/Saturn",
   },
   {
     id: 8,
@@ -116,7 +133,14 @@ const solarSystemInfo = [
     description: `Uranus is the seventh planet from the Sun. Its name is a reference to the Greek 
       god of the sky, Uranus, who, according to Greek mythology, was the great-grandfather of Ares, 
       grandfather of Zeus and father of Cronus. It has the third-largest planetary radius and 
-      fourth-largest planetary mass in the Solar System.`
+      fourth-largest planetary mass in the Solar System. It was the first planet found with the 
+      aid of a telescope, Uranus was discovered in 1781 by astronomer William Herschel, although 
+      he originally thought it was either a comet or a star. It was two years later that the object 
+      was universally accepted as a new planet, in part because of observations by astronomer Johann 
+      Elert Bode. Herschel tried unsuccessfully to name his discovery Georgium Sidus after King George 
+      III. Instead, the scientific community accepted Bode's suggestion to name it Uranus, the 
+      Greek god of the sky, as suggested by Bode.`,
+    link: "https://en.wikipedia.org/wiki/Uranus",
   },
   {
     id: 9,
@@ -127,7 +151,11 @@ const solarSystemInfo = [
     description: `Neptune is the eighth and farthest-known Solar planet from the Sun. In the Solar 
       System, it is the fourth-largest planet by diameter, the third-most-massive planet, and the 
       densest giant planet. It is 17 times the mass of Earth, slightly more massive than its near-twin 
-      Uranus.`
+      Uranus. Dark, cold, and whipped by supersonic winds, ice giant Neptune is the eighth and most 
+      distant planet in our solar system. More than 30 times as far from the Sun as Earth, 
+      Neptune is the only planet in our solar system not visible to the naked eye and the 
+      first predicted by mathematics before its discovery. In 2011 Neptune completed its first 165-year orbit since its discovery in 1846.`,
+    link: "https://en.wikipedia.org/wiki/Neptune",
   },
 ];
 

@@ -2,37 +2,37 @@ import React, { Suspense, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { useTexture } from "@react-three/drei";
 
-// Import Sun Texture
-import SunTexture from "../../assets/textures/8k_sun.jpg";
+// Import Venus Texture
+import VenusTexture from "../../assets/textures/8k_venus_surface.jpg";
 
-function SunScene() {
+function VenusScene() {
   // Texture files
-  const [SunMap] = useTexture([SunTexture]);
-  const sunRef = useRef(null);
+  const [VenusMap] = useTexture([VenusTexture]);
+  const VenusRef = useRef(null);
 
   useFrame(() => {
-    sunRef.current.rotation.y += 0.0003; // Sun rotation speed
+    VenusRef.current.rotation.y += 0.0003; // Venus rotation speed
   });
 
   return (
     <>
       <ambientLight intensity={2} />
-      <mesh ref={sunRef}>
+      <mesh ref={VenusRef}>
         <ambientLight color='#61adff' intensity={1}/>
         <sphereBufferGeometry attach="geometry" args={[2, 64, 32]} />
         <meshStandardMaterial 
-          map={SunMap}
+          map={VenusMap}
         />
       </mesh>
     </>
   );
 }
 
-export const Sun = () => {
+export const Venus = () => {
   return (
     <Canvas>
       <Suspense fallback={null}>
-        <SunScene />
+        <VenusScene />
       </Suspense>
     </Canvas>
   );
