@@ -1,5 +1,5 @@
 // Import necessary dependencies
-import solarSystemInfo from "../planet-data/planets";
+import solarSystemInfo from "../data/planets";
 import { NavHome } from "./Navbar";
 
 // Import styling

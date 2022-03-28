@@ -27,6 +27,8 @@ const NasaPhoto = () => {
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState([]);
 
+  console.log(process.env.REACT_APP_API_KEY);
+
   // Fetch API and return result or error if detected
   useEffect(() => {
     fetch(
