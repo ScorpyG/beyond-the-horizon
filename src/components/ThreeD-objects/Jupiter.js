@@ -11,14 +11,13 @@ function JupiterScene() {
   const JupiterRef = useRef(null);
 
   useFrame(() => {
-    JupiterRef.current.rotation.y += 0.0003; // Jupiter rotation speed
+    JupiterRef.current.rotation.y += 0.0005; // Jupiter rotation speed
   });
 
   return (
     <>
-      <ambientLight intensity={2} />
+      <ambientLight intensity={1} />
       <mesh ref={JupiterRef}>
-        <ambientLight color='#61adff' intensity={1}/>
         <sphereBufferGeometry attach="geometry" args={[2, 64, 32]} />
         <meshStandardMaterial 
           map={JupiterMap}

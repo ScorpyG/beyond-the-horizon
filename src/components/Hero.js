@@ -21,9 +21,7 @@ export const Hero = () => {
           horizon and learn some cool astronomy facts.
         </p>
 
-        <Link to="/exploring">
-          <u>EXPLORE</u>
-        </Link>
+        <Link to="/exploring">EXPLORE</Link>
       </div>
 
       <div className="hero-image">

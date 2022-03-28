@@ -11,14 +11,13 @@ function SaturnScene() {
   const SaturnRef = useRef(null);
 
   useFrame(() => {
-    SaturnRef.current.rotation.y += 0.0003; // Saturn rotation speed
+    SaturnRef.current.rotation.y += 0.0005; // Saturn rotation speed
   });
 
   return (
     <>
-      <ambientLight intensity={2} />
+      <ambientLight color={'#fffff'} intensity={0.8} />
       <mesh ref={SaturnRef}>
-        <ambientLight color='#61adff' intensity={1}/>
         <sphereBufferGeometry attach="geometry" args={[2, 64, 32]} />
         <meshStandardMaterial 
           map={SaturnMap}

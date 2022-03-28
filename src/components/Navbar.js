@@ -1,4 +1,5 @@
 // Import necessary dependencies / components
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 // Import styling
@@ -6,33 +7,35 @@ import "../styling/navbar.sass";
 
 // Navigation bar JSX component
 const Navbar = () => {
+  const [sideNav, setSideNav] = useState(false);
+
   return (
     <div className="nav-bar">
       <div className="nav-item">
         <Link to="/exploring">
           {/* <i class="fas fa-globe-europe"/> */}
-          <span><u>SOLAR SYSTEM</u></span>
+          <span>SOLAR SYSTEM</span>
         </Link>
       </div>
 
       <div className="nav-item">
         <Link to="/marsphoto">
           {/* <i className="fas fa-robot"/> */}
-          <span><u>EXPLORE MARS</u></span>
+          <span>EXPLORE MARS</span>
         </Link>
       </div>
 
       <div className="nav-item">
         <Link to="/isstracker">
           {/* <i className="fas fa-satellite"/> */}
-          <span><u>ISS TRACKER</u></span>
+          <span>ISS TRACKER</span>
         </Link>
       </div>
 
       <div className="nav-item">
         <Link to="/apod">
           {/* <i className="fas fa-meteor"/> */}
-          <span><u>APOD</u></span>
+          <span>APOD</span>
         </Link>
       </div>
     </div>

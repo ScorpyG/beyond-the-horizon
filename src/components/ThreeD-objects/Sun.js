@@ -11,7 +11,7 @@ function SunScene() {
   const sunRef = useRef(null);
 
   useFrame(() => {
-    sunRef.current.rotation.y += 0.0003; // Sun rotation speed
+    sunRef.current.rotation.y += 0.0005; // Sun rotation speed
   });
 
   return (

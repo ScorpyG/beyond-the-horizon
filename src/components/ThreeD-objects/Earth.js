@@ -43,13 +43,13 @@ function EarthScene() {
       {/* Earth atmosphere */}
       <mesh ref={cloudRef}>
         {/* Mesh Lighting */}
-        <ambientLight color='#61adff' intensity={0.9}/>
+        <ambientLight color='#61adff' intensity={1.5}/>
 
         {/* Import atmosphere texture into mesh */}
         <sphereBufferGeometry attach="geometry" args={[2.95, 64, 32]} />
         <meshPhongMaterial
           map={EcloudMap}
-          opacity={0.6}
+          opacity={0.5}
           depthWrite={true}
           transparent={true}
           side={THREE.DoubleSide}
@@ -62,7 +62,7 @@ function EarthScene() {
         <hemisphereLightProbe color='#ffffff' intensity={1.2} />
 
         {/* Import object textures into mesh */}
-        <sphereBufferGeometry attach="geometry" args={[2.92, 64, 32]} />
+        <sphereBufferGeometry attach="geometry" args={[2.91, 64, 32]} />
         <meshPhongMaterial specularMap={EspecMap} />
         <meshStandardMaterial
           map={EarthMap}

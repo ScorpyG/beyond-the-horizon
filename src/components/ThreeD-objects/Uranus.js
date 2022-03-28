@@ -11,14 +11,13 @@ function UranusScene() {
   const UranusRef = useRef(null);
 
   useFrame(() => {
-    UranusRef.current.rotation.y += 0.0003; // Uranus rotation speed
+    UranusRef.current.rotation.y += 0.0005; // Uranus rotation speed
   });
 
   return (
     <>
-      <ambientLight intensity={2} />
+      <ambientLight intensity={0.5} />
       <mesh ref={UranusRef}>
-        <ambientLight color='#61adff' intensity={1}/>
         <sphereBufferGeometry attach="geometry" args={[2, 64, 32]} />
         <meshStandardMaterial 
           map={UranusMap}

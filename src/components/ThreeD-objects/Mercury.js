@@ -11,14 +11,13 @@ function MercuryScene() {
   const MercuryRef = useRef(null);
 
   useFrame(() => {
-    MercuryRef.current.rotation.y += 0.0003; // Mercury rotation speed
+    MercuryRef.current.rotation.y += 0.0005; // Mercury rotation speed
   });
 
   return (
     <>
-      <ambientLight intensity={2} />
+      <ambientLight intensity={1} />
       <mesh ref={MercuryRef}>
-        <ambientLight color='#61adff' intensity={1}/>
         <sphereBufferGeometry attach="geometry" args={[2, 64, 32]} />
         <meshStandardMaterial 
           map={MercuryMap}

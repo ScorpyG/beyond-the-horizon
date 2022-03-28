@@ -8,11 +8,19 @@ Utilize different REST APIs to display contents related to space exploration and
 Learning Three.js to create an interactive environment and implementing through React framework with [Drei](https://docs.pmnd.rs/drei/introduction) & [React Three Fiber](https://docs.pmnd.rs/react-three-fiber).
 
 REST APIs:
-- SpaceX Missions (Learn about SpaceX attempts to launch/test their combustion engines)
-- APOD (Astronomy Picture of the Day)
-- Mars Rover Photos: Images captured by NASA Mars Rovers (Curiosity, Opportunity and Spirit)
-- Insight: Mars Weather Service API (Not 100% accurate)
-- International Space Station Tracker
+❌ SpaceX Missions (Learn about SpaceX attempts to launch/test their combustion engines)  
+✔️ APOD (Astronomy Picture of the Day)  
+❌ Mars Rover Photos: Images captured by NASA Mars Rovers (Curiosity, Opportunity and Spirit)  
+❌ Insight: Mars Weather Service API (Not 100% accurate)  
+❌ International Space Station Tracker  
+
+# Tech Stack
+- SASS
+- React.js
+- Three.js
+- Netlify
+- Git & Github
+- APIs
 
 # Resources & Documentations
 - [Threejs](https://threejs.org/)

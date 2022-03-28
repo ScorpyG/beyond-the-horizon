@@ -11,14 +11,13 @@ function VenusScene() {
   const VenusRef = useRef(null);
 
   useFrame(() => {
-    VenusRef.current.rotation.y += 0.0003; // Venus rotation speed
+    VenusRef.current.rotation.y += 0.0005; // Venus rotation speed
   });
 
   return (
     <>
-      <ambientLight intensity={2} />
+      <ambientLight intensity={1.5} />
       <mesh ref={VenusRef}>
-        <ambientLight color='#61adff' intensity={1}/>
         <sphereBufferGeometry attach="geometry" args={[2, 64, 32]} />
         <meshStandardMaterial 
           map={VenusMap}

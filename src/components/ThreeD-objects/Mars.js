@@ -11,14 +11,13 @@ function MarsScene() {
   const MarsRef = useRef(null);
 
   useFrame(() => {
-    MarsRef.current.rotation.y += 0.0003; // Mars rotation speed
+    MarsRef.current.rotation.y += 0.0005; // Mars rotation speed
   });
 
   return (
     <>
-      <ambientLight intensity={2} />
+      <ambientLight intensity={1.5} />
       <mesh ref={MarsRef}>
-        <ambientLight color='#61adff' intensity={1}/>
         <sphereBufferGeometry attach="geometry" args={[2, 64, 32]} />
         <meshStandardMaterial 
           map={MarsMap}

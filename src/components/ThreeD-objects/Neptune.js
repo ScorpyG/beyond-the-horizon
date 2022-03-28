@@ -11,14 +11,13 @@ function NeptuneScene() {
   const NeptuneRef = useRef(null);
 
   useFrame(() => {
-    NeptuneRef.current.rotation.y += 0.0003; // Neptune rotation speed
+    NeptuneRef.current.rotation.y += 0.0005; // Neptune rotation speed
   });
 
   return (
     <>
       <ambientLight intensity={2} />
       <mesh ref={NeptuneRef}>
-        <ambientLight color='#61adff' intensity={1}/>
         <sphereBufferGeometry attach="geometry" args={[2, 64, 32]} />
         <meshStandardMaterial 
           map={NeptuneMap}
