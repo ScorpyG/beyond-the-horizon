@@ -1,6 +1,7 @@
 // Import necessary dependencies / components
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import navBarURLs from "../data/nav";
 
 // Import styling
 import "../styling/navbar.sass";
@@ -8,50 +9,35 @@ import "../styling/navbar.sass";
 // Navigation bar JSX component
 const Navbar = () => {
   const [sideNav, setSideNav] = useState(false);
+  const showSideNav = () => setSideNav(!sideNav);
 
   return (
-    <div className="nav-bar">
-      <div className="nav-item">
-        <Link to="/exploring">
-          {/* <i class="fas fa-globe-europe"/> */}
-          <span>SOLAR SYSTEM</span>
-        </Link>
+    <>
+      {/* Navigator Menu Toggle Button */}
+      <div className={`${sideNav ? "toggle-nav-btn active" : "toggle-nav-btn"}`} onClick={showSideNav}>
+        <i className={`${sideNav ? "fas fa-times" : "fas fa-bars"}`}/>
       </div>
 
-      <div className="nav-item">
-        <Link to="/marsphoto">
-          {/* <i className="fas fa-robot"/> */}
-          <span>EXPLORE MARS</span>
-        </Link>
-      </div>
+      {/* Navigator Menu */}
+      <ul className={`${sideNav ? "nav-bar active" : "nav-bar"}`} onClick={showSideNav}>
+        {navBarURLs.map((item, index) => {
+          return(
+            <li key={index} className="nav-item">
+              <Link to={`/${item.path}`}>
+                {item.title.toUpperCase()} &nbsp; <i className={item.icon} />
+              </Link>
+            </li>
+          )
+        })}
 
-      <div className="nav-item">
-        <Link to="/isstracker">
-          {/* <i className="fas fa-satellite"/> */}
-          <span>ISS TRACKER</span>
-        </Link>
-      </div>
-
-      <div className="nav-item">
-        <Link to="/apod">
-          {/* <i className="fas fa-meteor"/> */}
-          <span>APOD</span>
-        </Link>
-      </div>
-    </div>
+        <li className="nav-item">
+            <a href="https://github.com/ScorpyG/beyond-the-horizon" target="_blank" rel="noreferrer">
+            VIEW REPO &nbsp; <i className="fas fa-code"/>
+            </a>
+        </li>
+      </ul>
+    </>
   );
 };
 
-const NavHome = () => {
-  return (
-    <div className="nav-bar">
-      <div className="nav-item">
-        <Link to="/">
-          <span><u>RETURN</u></span>
-        </Link>
-      </div>
-    </div>
-  );
-};
-
-export { Navbar, NavHome };
+export default Navbar;

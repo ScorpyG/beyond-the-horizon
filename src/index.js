@@ -5,13 +5,13 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import App from "./App";
 import ISSTracker from "./components/ISSTracker";
 import MarsPhoto from "./components/MarsPhoto";
-import NasaPhoto from "./components/NasaPhoto";
+import NasaPhoto from "./components/APOD";
 import SolarSystem from "./components/SolarSystem";
-import { Background } from "./components/Background";
+import { SpaceX } from "./components/SpaceX";
+import { Error } from "./components/Error";
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <Background /> */}
     <Router>
       <Routes>
         <Route exact path="/" element={<App />} />
@@ -19,6 +19,8 @@ ReactDOM.render(
         <Route path="marsphoto" element={<MarsPhoto />} />
         <Route path="isstracker" element={<ISSTracker />} />
         <Route path="apod" element={<NasaPhoto />} />
+        <Route path="spacex" element={<SpaceX />} />
+        <Route element={<Error />} />
       </Routes>
     </Router>
   </React.StrictMode>,

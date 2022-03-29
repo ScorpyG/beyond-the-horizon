@@ -1,11 +1,11 @@
 // Import necessary dependencies / components
-import { NavHome } from './Navbar'
+import Navbar from "./Navbar"
 
 // ISS Tracker Page JSX component
 const ISSTracker = () => {
     return (
         <>
-            <NavHome/>
+            <Navbar/>
             <h1>International Space Station Stacker</h1>
         </>
     );

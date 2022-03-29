@@ -1,6 +1,6 @@
 // Import necessary dependencies / components
 import { useState } from "react";
-import { NavHome } from "./Navbar";
+import Navbar from "./Navbar";
 import DatePicker from "react-datepicker";
 import { addDays } from "date-fns";
 import { trackPromise } from "react-promise-tracker";
@@ -57,6 +57,7 @@ const MarsPhoto = () => {
 
     return (
       <>
+        <Navbar />
         <h1>hELLO wORLD</h1>
       </>
     );

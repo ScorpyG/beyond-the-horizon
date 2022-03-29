@@ -37,15 +37,17 @@ a
   text-decoration: none
   font-weight: 600
   color: rgb(220, 220, 220)
-  &:before
-    content: '> '
+  &::before
+    content: '>> \00a0'
     opacity: 0
   &:hover, &:active
     color: rgb(255, 255, 255)
-    &:before
+    &::before
       opacity: 1
 
 .title 
+  margin: 0
+  padding: 20px 0
   text-align: center
 
 /* Inherit fonts for inputs and buttons */

@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { Ring } from "react-cssfx-loading/lib";
-import { NavHome } from "./Navbar";
+
 import "../styling/nasaphoto.sass";
+import Navbar from "./Navbar";
 
 // Return different JSX depends on API object media type
 const ImageOrVideo = (obj) => {
@@ -26,8 +27,6 @@ const NasaPhoto = () => {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState([]);
-
-  console.log(process.env.REACT_APP_API_KEY);
 
   // Fetch API and return result or error if detected
   useEffect(() => {
@@ -57,7 +56,7 @@ const NasaPhoto = () => {
   if (error) {
     return (
       <>
-        <NavHome />
+        <Navbar/>
         <div className="loading">
           <h1>Code: {error.code}</h1>
           <h2>Error: {error.msg}</h2>
@@ -75,7 +74,7 @@ const NasaPhoto = () => {
   } else {
     return (
       <>
-        {/* <NavHome /> */}
+        <Navbar/>
         <h1 className="title">Astronomy Picture Of the Day</h1>
         <div className="apod-box">
           <div className="image-box">

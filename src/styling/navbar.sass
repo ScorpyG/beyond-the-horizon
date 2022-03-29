@@ -1,11 +1,43 @@
-.nav-bar
-    width: 100%
-    display: flex
-    justify-content: center
-    .nav-item
-        margin: 0 20px 0 20px 
-        font-size: 1.3rem
-        padding: 40px 0 0 0
-        text-align: center
-        position: relative
+.toggle-nav-btn
+    z-index: 2
+    margin: 0
+    position: fixed
+    padding: 20px 20px 20px 15px
+    left: 0
+    top: 0
+    border-top-right-radius: 50px
+    border-bottom-right-radius: 50px
+    font-size: 1.4rem
+    backdrop-filter: blur(3px)
+    background: rgba(30, 30, 30, 0.8)
+    cursor: pointer
+    transition: 250ms
+    &:hover
+        background-color: rgba(30, 30, 30, 0.7)
+    
+.toggle-nav-btn.active
+    left: 300px
 
+.nav-bar
+    list-style-type: none
+    padding: 0
+    margin: 0
+    z-index: 2
+    top: 0
+    left: -300px
+    height: 100vh
+    width: 300px
+    backdrop-filter: blur(3px)
+    background: rgba(30, 30, 30, 0.8)
+    position: fixed 
+    transition: 250ms
+    .nav-item
+        font-size: 1.2rem
+        padding: 30px 20px
+        text-align: left
+        position: relative
+        &:hover
+            background-color: rgba(15, 15, 15, 0.6)
+
+.nav-bar.active
+    left: 0

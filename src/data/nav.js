@@ -1,33 +1,40 @@
 const navBarURLs = [
     {
+        id: 0,
+        title: "Home",
+        icon: "fas fa-undo",
+        path: ""
+    },
+    {
         id: 1,
-        Name: "Solar System",
-        URL_link: "exploring"
+        title: "Solar System",
+        icon: "fas fa-globe-americas",
+        path: "exploring"
     },
     {
         id: 2,
-        Name: "Astronomy Picture of the Day",
-        URL_link: "apod" 
+        title: "Astronomy Image",
+        icon: "fas fa-star",
+        path: "apod" 
     },
     {
         id: 3,
-        Name: "ISS Tracker",
-        URL_link: "isstracker"
+        title: "ISS Tracker",
+        icon: "fas fa-satellite",
+        path: "isstracker"
     },
     {
         id: 4,
-        Name: "Explore Mars",
-        URL_link: "marsphoto"
+        title: "Explore Mars",
+        icon: "fas fa-space-shuttle",
+        path: "marsphoto"
     },
     {
         id: 5,
-        Name: "SpaceX Missions",
-        URL_link: "spacex",
+        title: "SpaceX Missions",
+        icon: "fas fa-rocket",
+        path: "spacex",
     },
-    {
-        id: 6,
-        Name: "SRC",
-        URL_link: "https://github.com/ScorpyG/beyond-the-horizon"
-    },
+];
 
-]
+export default navBarURLs;
