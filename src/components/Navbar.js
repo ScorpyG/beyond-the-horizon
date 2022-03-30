@@ -1,6 +1,6 @@
 // Import necessary dependencies / components
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import navBarURLs from "../data/nav";
 
 // Import styling
@@ -8,6 +8,13 @@ import "../styling/navbar.sass";
 
 // Navigation bar JSX component
 const Navbar = () => {
+  // Destructuring pathname from location
+  const { pathname } = useLocation();
+
+  // Javascript split method to get the name of the path in array
+ const splitLocation = pathname.split("/");
+
+  // Toggle Stage
   const [sideNav, setSideNav] = useState(false);
   const showSideNav = () => setSideNav(!sideNav);
 
@@ -22,7 +29,7 @@ const Navbar = () => {
       <ul className={`${sideNav ? "nav-bar active" : "nav-bar"}`} onClick={showSideNav}>
         {navBarURLs.map((item, index) => {
           return(
-            <li key={index} className="nav-item">
+            <li key={index} className={splitLocation[1] === `${item.path}` ? 'nav-item active' : 'nav-item'}>
               <Link to={`/${item.path}`}>
                 {item.title.toUpperCase()} &nbsp; <i className={item.icon} />
               </Link>
