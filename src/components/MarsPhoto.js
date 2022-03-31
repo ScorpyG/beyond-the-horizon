@@ -1,8 +1,9 @@
 // Import necessary dependencies / components
 import { useState } from "react";
 import Navbar from "./Navbar";
-import { addDays } from "date-fns";
 import { trackPromise } from "react-promise-tracker";
+import { Background } from "./Background";
+import Typewriter from "typewriter-effect";
 
 // Import styling
 import "../styling/marsphoto.sass";
@@ -20,7 +21,6 @@ const MarsPhoto = () => {
         )
       );
       const data = await response.json();
-
       setMarsData(data);
     };
 
@@ -35,44 +35,108 @@ const MarsPhoto = () => {
         <Navbar />
         <h1 className="title">Mars Rover Photo</h1>
         <div className="date-container">
-          <input
-            type="date"
-            onChange={(event) => setSelectedDate(event.target.value)}
-            dateformat="yyyy/MM/dd"
-            min="2012-07-06"
-            max={new Date().toISOString().split("T")[0]}
-          />
-          {/* Enable submit button only when a dated is selected */}
-          {selectedDate && <button onClick={dateSubmit}>Confirm</button>}
+          <div className="date-child-container">
+            <h1>Select a date & look for 👽</h1>
+            <input
+              className="date-input"
+              type="date"
+              onChange={(event) => setSelectedDate(event.target.value)}
+              dateformat="yyyy/MM/dd"
+              min="2012-08-06"
+              max={new Date().toISOString().split("T")[0]}
+            />
+            {/* Enable submit button only when a dated is selected */}
+            {selectedDate && (
+              <button className="date-confirm" onClick={dateSubmit}>
+                CONFIRM
+              </button>
+            )}
+          </div>
         </div>
+        <Background />
       </>
     );
   }
 
   // API data
-  const photo = marsData.photos.map((item) => item.img_src);
+  const photoList = marsData.photos.map((item) => item.img_src);
   const OtherInfo = marsData.photos[0];
-  console.log(OtherInfo);
 
+  // Initial Date Selector element
   return (
     <>
       <Navbar />
       <h1 className="title">Mars Rover Photo</h1>
       <div className="mars-container">
-        <input
-          type="date"
-          onChange={(event) => setSelectedDate(event.target.value)}
-          dateformat="yyyy/MM/dd"
-          min="2012-07-06"
-          max={new Date().toISOString().split("T")[0]}
-        />
+        <div className="input-container"> 
+          <h1>Select a date & look for 👽</h1>
+          <input
+            className="date-input"
+            type="date"
+            onChange={(event) => setSelectedDate(event.target.value)}
+            dateformat="yyyy/MM/dd"
+            min="2012-08-06"
+            max={new Date().toISOString().split("T")[0]}
+          />
+        
         {/* Enable submit button only when a dated is selected */}
-        {selectedDate && (<button onClick={dateSubmit}>Confirm</button>)}
-
-        {/* Return msg there any pictures taken on this day */}
-        {marsData.photos.length === 0 && (
-          <h1>No photos were taken on this date</h1>
+        {selectedDate && (
+          <button className="date-confirm" onClick={dateSubmit}>
+            Confirm
+          </button>
         )}
+        </div>
+
+        {/* Return msg there no pictures taken on this day */}
+        {marsData.photos.length === 0 && (
+          <Typewriter
+            options={{
+              cursor: " <",
+              autoStart: true,
+              strings: [
+                "Sorry...no photos was taken on this day",
+                "Perhaps, the aliens wanted to destroy the evidence",
+              ],
+              loop: true,
+              skipAddStyles: true,
+            }}
+          />
+        )}
+        
+        <div>
+          <div>
+            <h2>{`${OtherInfo.earth_date}`}</h2>
+            <h2>
+              <a
+                href="https://en.wikipedia.org/wiki/Sol"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Sol
+              </a>
+              : {`${OtherInfo.sol}`}
+            </h2>
+            <h2>Rover: {`${OtherInfo.rover.name.toUpperCase()}`}</h2>
+            <h2>
+              Status:{" "}
+              {OtherInfo.rover.status === "active" ? (
+                <span style={{ color: "green" }}>
+                  {`${OtherInfo.rover.status.toUpperCase()}`}
+                </span>
+              ) : (
+                <span style={{ color: "red" }}>
+                  {`${OtherInfo.rover.status.toUpperCase()}`}
+                </span>
+              )}
+            </h2>
+          </div>
+
+          <div>
+            {photoList.map((photo, id) => {
+              return <img src={photo} key={id} width="400px" style={{margin: '10px'}} alt="Cool rocks and Aliens" />;
+            })}
+          </div>
+        </div>
       </div>
     </>
   );

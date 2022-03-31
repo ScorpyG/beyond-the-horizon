@@ -36,6 +36,18 @@
         &:hover
             background-color: rgba(15, 15, 15, 0.6)
 
+.link
+  text-decoration: none
+  font-weight: 600
+  color: rgb(200, 200, 200)
+  &::before
+    content: '>> \00a0'
+    opacity: 0
+  &:hover, &:active
+    color: rgb(255, 255, 255)
+    &::before
+      opacity: 1
+
 // Active state for nav components
 .toggle-nav-btn.active
     left: 300px

@@ -20,7 +20,7 @@ ReactDOM.render(
         <Route path="isstracker" element={<ISSTracker />} />
         <Route path="apod" element={<NasaPhoto />} />
         <Route path="spacex" element={<SpaceX />} />
-        <Route element={<Error />} />
+        <Route path="*" element={<Error />} />
       </Routes>
     </Router>
   </React.StrictMode>,

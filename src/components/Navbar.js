@@ -30,7 +30,7 @@ const Navbar = () => {
         {navBarURLs.map((item, index) => {
           return(
             <li key={index} className={splitLocation[1] === `${item.path}` ? 'nav-item active' : 'nav-item'}>
-              <Link to={`/${item.path}`}>
+              <Link to={`/${item.path}`} className="link">
                 {item.title.toUpperCase()} &nbsp; <i className={item.icon} />
               </Link>
             </li>
@@ -38,7 +38,7 @@ const Navbar = () => {
         })}
 
         <li className="nav-item">
-            <a href="https://github.com/ScorpyG/beyond-the-horizon" target="_blank" rel="noreferrer">
+            <a href="https://github.com/ScorpyG/beyond-the-horizon" target="_blank" rel="noreferrer" className="link">
             VIEW REPO &nbsp; <i className="fas fa-code"/>
             </a>
         </li>

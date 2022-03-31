@@ -16,7 +16,7 @@ function SaturnScene() {
 
   return (
     <>
-      <ambientLight color={'#fffff'} intensity={0.8} />
+      <ambientLight color={'#ffffff'} intensity={0.8} />
       <mesh ref={SaturnRef}>
         <sphereBufferGeometry attach="geometry" args={[2, 64, 32]} />
         <meshStandardMaterial 

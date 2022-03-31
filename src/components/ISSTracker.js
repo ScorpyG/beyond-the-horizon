@@ -1,7 +1,6 @@
 // Import necessary dependencies / components
 import { Loading } from "./Loading";
 import Navbar from "./Navbar";
-import { Background } from "./Background";
 
 // Import styling
 import "../styling/isstracker.sass"
@@ -11,9 +10,8 @@ const ISSTracker = () => {
     return (
         <>
             <Navbar/>
-            <h1 className="title">International Space Station Stacker</h1>
+            <h1 className="title">International Space Station Tracker</h1>
             <Loading />
-            {/* <Background /> */}
         </>
     );
 }
