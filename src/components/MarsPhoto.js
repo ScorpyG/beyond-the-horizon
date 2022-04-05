@@ -13,6 +13,7 @@ const MarsPhoto = () => {
   const [marsData, setMarsData] = useState(null);
   const [selectedDate, setSelectedDate] = useState(null);
 
+  // Fetch function
   const dateSubmit = () => {
     const fetchPhoto = async () => {
       const response = await trackPromise(
@@ -45,6 +46,11 @@ const MarsPhoto = () => {
               min="2012-08-06"
               max={new Date().toISOString().split("T")[0]}
             />
+
+            {/* <button className="date-confirm" onClick={dateSubmit}>
+              CONFIRM
+            </button> */}
+
             {/* Enable submit button only when a dated is selected */}
             {selectedDate && (
               <button className="date-confirm" onClick={dateSubmit}>
@@ -68,7 +74,7 @@ const MarsPhoto = () => {
       <Navbar />
       <h1 className="title">Mars Rover Photo</h1>
       <div className="mars-container">
-        <div className="input-container"> 
+        <div className="input-container">
           <h1>Select a date & look for 👽</h1>
           <input
             className="date-input"
@@ -78,65 +84,82 @@ const MarsPhoto = () => {
             min="2012-08-06"
             max={new Date().toISOString().split("T")[0]}
           />
-        
-        {/* Enable submit button only when a dated is selected */}
-        {selectedDate && (
-          <button className="date-confirm" onClick={dateSubmit}>
-            Confirm
-          </button>
-        )}
+
+          {/* <button className="date-confirm" onClick={dateSubmit}>
+            CONFIRM
+          </button> */}
+
+          {/* Enable submit button only when a dated is selected */}
+          {selectedDate && (
+            <button className="date-confirm" onClick={dateSubmit}>
+              Confirm
+            </button>
+          )}
         </div>
 
         {/* Return msg there no pictures taken on this day */}
         {marsData.photos.length === 0 && (
-          <Typewriter
-            options={{
-              cursor: " <",
-              autoStart: true,
-              strings: [
-                "Sorry...no photos was taken on this day",
-                "Perhaps, the aliens wanted to destroy the evidence",
-              ],
-              loop: true,
-              skipAddStyles: true,
-            }}
-          />
+          <div className="error">
+            <Typewriter
+              options={{
+                cursor: " <",
+                autoStart: true,
+                strings: [
+                  "Sorry...no photos was taken on this day",
+                  "We haven't received anything for our ROVER, comeback tomorrow",
+                  "Perhaps, the aliens removed the evidence",
+                ],
+                loop: true,
+                skipAddStyles: true,
+              }}
+            />
+          </div>
         )}
-        
-        <div>
-          <div>
-            <h2>{`${OtherInfo.earth_date}`}</h2>
-            <h2>
-              <a
-                href="https://en.wikipedia.org/wiki/Sol"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Sol
-              </a>
-              : {`${OtherInfo.sol}`}
-            </h2>
-            <h2>Rover: {`${OtherInfo.rover.name.toUpperCase()}`}</h2>
-            <h2>
-              Status:{" "}
-              {OtherInfo.rover.status === "active" ? (
-                <span style={{ color: "green" }}>
-                  {`${OtherInfo.rover.status.toUpperCase()}`}
-                </span>
-              ) : (
-                <span style={{ color: "red" }}>
-                  {`${OtherInfo.rover.status.toUpperCase()}`}
-                </span>
-              )}
-            </h2>
-          </div>
 
+        {marsData.photos.length !== 0 && (
           <div>
-            {photoList.map((photo, id) => {
-              return <img src={photo} key={id} width="400px" style={{margin: '10px'}} alt="Cool rocks and Aliens" />;
-            })}
+            <div>
+              <h2>{`${OtherInfo.earth_date}`}</h2>
+              <h2>
+                <a
+                  href="https://en.wikipedia.org/wiki/Sol"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Sol
+                </a>
+                : {`${OtherInfo.sol}`}
+              </h2>
+              <h2>Rover: {`${OtherInfo.rover.name.toUpperCase()}`}</h2>
+              <h2>
+                Status:{" "}
+                {OtherInfo.rover.status === "active" ? (
+                  <span style={{ color: "green" }}>
+                    {`${OtherInfo.rover.status.toUpperCase()}`}
+                  </span>
+                ) : (
+                  <span style={{ color: "red" }}>
+                    {`${OtherInfo.rover.status.toUpperCase()}`}
+                  </span>
+                )}
+              </h2>
+            </div>
+
+            <div>
+              {photoList.map((photo, id) => {
+                return (
+                  <img
+                    src={photo}
+                    key={id}
+                    width="400px"
+                    style={{ margin: "10px", borderRadius: "20px" }}
+                    alt="Cool rocks and Aliens"
+                  />
+                );
+              })}
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </>
   );

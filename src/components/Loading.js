@@ -6,7 +6,7 @@ import { Background } from "./Background";
 // Import styling
 import "../styling/loading.sass";
 
-export const Loading = () => {
+export const Loading404 = () => {
   return (
     <>
       <div className="parent-div">

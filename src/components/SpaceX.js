@@ -1,4 +1,4 @@
-import { Loading } from "./Loading";
+import { Loading404 } from "./Loading";
 import Navbar from "./Navbar";
 
 export const SpaceX = () => {
@@ -6,7 +6,7 @@ export const SpaceX = () => {
         <>
             <Navbar />
             <h1 className="title">SpaceX Missions</h1>
-            <Loading />
+            <Loading404 />
         </>
     )
 }
