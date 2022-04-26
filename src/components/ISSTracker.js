@@ -37,7 +37,7 @@ const ISSTracker = () => {
 
     // Limited fetch update every 1s
     setInterval(getISSData, 1000);
-  }, []);
+  }, [longitude, latitude]);
 
   // Return DOM for error
   if (error) {
