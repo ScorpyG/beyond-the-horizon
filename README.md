@@ -12,10 +12,17 @@ Learning Three.js to create an interactive environment and implementing through 
 
 REST APIs:    
 ✔️ APOD (Astronomy Picture of the Day)  
+![APOD Page](https://media4.giphy.com/media/lUuHp70a5jakmO0CMJ/200w.webp)  
+
 ✔️ Mars Rover Photos: Images captured by NASA Mars Rovers (Curiosity, Opportunity and Spirit)  
+![Exploring Mars](https://media4.giphy.com/media/fS7oBicxHJdz4VyIz8/giphy.gif?cid=790b7611b0654c52b59a2ba456ab548da809cb5ca715bb41&rid=giphy.gif&ct=g)  
+
 ❌ SpaceX Missions (Learn about SpaceX attempts to launch/test their combustion engines)  
+
 ❌ International Space Station Tracker  
+
 ❌ Insight: Mars Weather Service API (Not 100% accurate)  
+
 
 # Tech Stack
 - SASS
