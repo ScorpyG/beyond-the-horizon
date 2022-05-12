@@ -7,7 +7,7 @@
 Utilize different REST APIs to display contents related to space exploration and help people learn more about the world beyond our own. Make it fun and interactive and also look out for alien 👽.
 Learning Three.js to create an interactive environment and implementing through React framework with [Drei](https://docs.pmnd.rs/drei/introduction) & [React Three Fiber](https://docs.pmnd.rs/react-three-fiber).
 
-REST APIs: 
+REST APIs:  
 ✔️ APOD (Astronomy Picture of the Day)  
 ✔️ Mars Rover Photos: Images captured by NASA Mars Rovers (Curiosity, Opportunity and Spirit)  
 ❌ SpaceX Missions (Learn about SpaceX attempts to launch/test their combustion engines)  
