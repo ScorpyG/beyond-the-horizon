@@ -1,6 +1,9 @@
 # Beyond The Horizon
 
-## This project is **DEVELOYED!**, new features are being implemented.
+## This project is [**DEPLOYED!**](https://beyond-the-horizon.netlify.app/), new features are being implemented.
+![Home Page](https://media0.giphy.com/media/M5uMCrJE7S14ew1Yba/giphy.gif)
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1a4d889e-1c19-42d5-aeb6-811c9dcca14a/deploy-status)](https://app.netlify.com/sites/beyond-the-horizon/deploys)
 
 ## Description
 
