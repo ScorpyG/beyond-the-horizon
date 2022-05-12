@@ -1,6 +1,6 @@
 # Beyond The Horizon
 
-## This project is in **DEVELOPMENT!**
+## This project is **DEVELOYED!**, new features are being implemented.
 
 ## Description
 
@@ -27,12 +27,3 @@ REST APIs:
 - [NASA APIs](https://api.nasa.gov/)
 - [wheretheiss](https://wheretheiss.at/)
 - [r/SpaceX API](https://docs.spacexdata.com/)
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.

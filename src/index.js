@@ -1,13 +1,16 @@
+// Import necessary dependencies / components
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import App from "./App";
-import ISSTracker from "./components/ISSTracker";
 import MarsPhoto from "./components/MarsPhoto";
 import NasaPhoto from "./components/APOD";
 import SolarSystem from "./components/SolarSystem";
-import { SpaceX } from "./components/SpaceX";
+
+// import ISSTracker from "./components/ISSTracker";
+// import { SpaceX } from "./components/SpaceX";
+
 import { Error } from "./components/Error";
 
 ReactDOM.render(
@@ -17,9 +20,11 @@ ReactDOM.render(
         <Route exact path="/" element={<App />} />
         <Route path="exploring" element={<SolarSystem />} />
         <Route path="marsphoto" element={<MarsPhoto />} />
-        <Route path="isstracker" element={<ISSTracker />} />
         <Route path="apod" element={<NasaPhoto />} />
-        <Route path="spacex" element={<SpaceX />} />
+
+        {/* <Route path="isstracker" element={<ISSTracker />} /> */}
+        {/* <Route path="spacex" element={<SpaceX />} /> */}
+
         <Route path="*" element={<Error />} />
       </Routes>
     </Router>
